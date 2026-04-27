@@ -1,0 +1,19 @@
+{% extends "members/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold">
+    <h1>All Members</h1>
+
+<ul>
+    {% for member in members %}
+        <li>
+            {{ member.fname }} {{ member.lname }} - Age: {{ member.age }}
+        </li>
+    {% empty %}
+        <li>No members found</li>
+    {% endfor %}
+</ul>
+</h1>
+{% endblock %}
